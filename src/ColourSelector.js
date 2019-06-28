@@ -5,10 +5,16 @@ class ColourSelector extends Component {
     hex: "#f4424b"
   };
 
-  render() {
-    const { hex, onColourSelectorChange } = this.props;
+  onInputChange = event => {
+    const { onColourSelectorChange } = this.props;
+    const hex = event.target.value;
+    onColourSelectorChange(hex);
+  };
 
-    return <input type="color" onChange={onColourSelectorChange} value={hex} />;
+  render() {
+    const { hex } = this.props;
+
+    return <input type="color" onChange={this.onInputChange} value={hex} />;
   }
 }
 
