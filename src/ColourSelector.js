@@ -10,7 +10,7 @@ class ColourSelector extends Component {
   };
 
   onInputChange(event) {
-    console.log(event.target.value);
+    console.log(this.state.hex);
   }
 
   render() {
