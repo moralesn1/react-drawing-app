@@ -10,10 +10,18 @@ class Canvas extends Component {
     console.log(this.state.hex);
   };
 
+  onColourSelectorChange = event => {
+    this.setState({ hex: event.target.value });
+  };
+
   render = () => {
+    const { hex } = this.state;
     return (
       <div>
-        <ColourSelector />
+        <ColourSelector
+          hex={hex}
+          onColourSelectorChange={this.onColourSelectorChange}
+        />
       </div>
     );
   };
