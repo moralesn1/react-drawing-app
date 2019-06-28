@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div>
         <h1> Welcome to your drawing Pad.</h1>
-        <ColourSelector hex="#f4424b" />
+        <ColourSelector hex="#ffffff" />
       </div>
     );
   }
